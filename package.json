@@ -1,0 +1,55 @@
+{
+  "name": "@cpfhub/sdk",
+  "version": "1.0.0",
+  "description": "Official Node.js/TypeScript SDK for CPFHub.io — Brazilian CPF lookup API. Get name, gender and date of birth from any CPF in ~300ms.",
+  "keywords": [
+    "cpf",
+    "cpf-api",
+    "cpf-lookup",
+    "cpf-validation",
+    "cpf-consulta",
+    "cpfhub",
+    "brasil",
+    "brazil",
+    "receita-federal",
+    "sdk",
+    "typescript",
+    "node",
+    "nodejs",
+    "api-client",
+    "fintech",
+    "kyc",
+    "identity-verification",
+    "onboarding",
+    "lgpd",
+    "validacao-cpf"
+  ],
+  "homepage": "https://cpfhub.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cpfhub/cpfhub-node"
+  },
+  "bugs": {
+    "url": "https://github.com/cpfhub/cpfhub-node/issues"
+  },
+  "license": "MIT",
+  "author": "CPFHub.io <contato@cpfhub.io> (https://cpfhub.io)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
