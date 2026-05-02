@@ -1,8 +1,8 @@
-# @cpfhub/sdk: SDK Node.js / TypeScript para Consulta de CPF (AI-Native)
+# @cpfhub/sdk: Node.js / TypeScript SDK for CPFHub.io
 
 **Official Node.js / TypeScript SDK for [CPFHub.io](https://cpfhub.io) — Brazilian CPF Lookup API**
 
-> SDK oficial Node.js / TypeScript para a [CPFHub.io](https://cpfhub.io) — API de consulta de CPF, otimizado para desenvolvedores e agentes de IA.
+> Official Node.js / TypeScript SDK for CPFHub.io. Retrieve identity data from a Brazilian CPF number.
 
 [![npm version](https://img.shields.io/npm/v/@cpfhub/sdk)](https://www.npmjs.com/package/@cpfhub/sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -10,34 +10,34 @@
 
 ---
 
-## O que é CPFHub.io?
+## What is CPFHub.io?
 
-CPFHub.io é uma API REST que retorna nome, gênero e data de nascimento a partir de qualquer CPF brasileiro — em ~300ms, com 99.9% de uptime, e total conformidade com a LGPD.
+CPFHub.io is a REST API that returns name, gender, and date of birth from any Brazilian CPF number — in ~300ms, with 99.9% uptime, and full LGPD compliance.
 
-**10M+ CPFs consultados · 1.300+ empresas ativas · 99.9% uptime**
-
----
-
-## Por que usar o SDK Node.js do CPFHub.io?
-
-Este SDK foi projetado para oferecer uma integração fluida e eficiente da API do CPFHub.io em projetos Node.js e TypeScript, com foco em Developer Experience (DX) e compatibilidade com Agentes de IA.
-
-### 1. Developer Experience (DX) Otimizada
-
-*   **Integração Rápida**: Facilita a incorporação de consultas de CPF em seus aplicativos e sistemas Node.js.
-*   **Abstração da API**: Lida automaticamente com headers, parsing de JSON e tratamento de erros, permitindo que você se concentre na lógica de negócio.
-
-### 2. Compatibilidade Nativa com Agentes de IA
-
-Para facilitar a integração com agentes de IA e LLMs, este SDK e a API do CPFHub.io oferecem:
-
-*   **OpenAPI Specification**: A especificação oficial da API está disponível no repositório [cpfhub-openapi](https://github.com/cpfhub/cpfhub-openapi), permitindo que agentes entendam automaticamente sua estrutura e schemas tipados.
-*   **Tool Descriptions**: A API é facilmente representável como "tool descriptions" para LLMs, facilitando a invocação em frameworks de agentes.
-*   **MCP Server Nativo**: O CPFHub.io oferece um servidor MCP que expõe a API diretamente para agentes de IA (Claude, Cursor, Windsurf), complementando o uso em ambientes de desenvolvimento Node.js.
+**10M+ CPFs queried · 1,300+ active companies · 99.9% uptime**
 
 ---
 
-## Installation / Instalação
+## Why use the CPFHub.io Node.js SDK?
+
+This SDK is designed to offer a fluid and efficient integration of the CPFHub.io API into Node.js and TypeScript projects, focusing on Developer Experience (DX) and compatibility with AI Agents.
+
+### 1. Optimized Developer Experience (DX)
+
+*   **Fast Integration**: Easily incorporate CPF lookups into your Node.js applications and systems.
+*   **API Abstraction**: Automatically handles headers, JSON parsing, and error handling, allowing you to focus on business logic.
+
+### 2. Native Compatibility with AI Agents
+
+To facilitate integration with AI agents and LLMs, this SDK and the CPFHub.io API offer:
+
+*   **OpenAPI Specification**: The official API specification is available at [cpfhub-openapi](https://github.com/cpfhub/cpfhub-openapi), allowing agents to automatically understand its structure and typed schemas.
+*   **Tool Descriptions**: The API is easily representable as "tool descriptions" for LLMs, facilitating invocation in agent frameworks.
+*   **Native MCP Server**: CPFHub.io offers an MCP server that exposes the API directly to AI agents (Claude, Cursor, Windsurf), complementing its use in Node.js development environments.
+
+---
+
+## Installation
 
 ```bash
 npm install @cpfhub/sdk
@@ -64,8 +64,6 @@ console.log(result.data.birthDate); // "15/06/1990"
 ```
 
 Get your free API key at [app.cpfhub.io](https://app.cpfhub.io) — no credit card required.
-
-> Obtenha sua chave gratuita em [app.cpfhub.io](https://app.cpfhub.io) — sem cartão de crédito.
 
 ---
 
@@ -134,6 +132,11 @@ try {
 
 ## Examples
 
+Check the `examples/` directory for sample usage:
+
+*   [simple_lookup.js](examples/simple_lookup.js)
+*   [real_world_onboarding.js](examples/real_world_onboarding.js)
+
 ### Node.js
 
 ```typescript
@@ -196,21 +199,19 @@ console.log(result.data.name);
 
 ---
 
-## Rate Limits / Limites de Requisição
+## Rate Limits
 
-| Plan / Plano | Limit / Limite |
+| Plan | Limit |
 |---|---|
-| Free / Grátis | 1 request every 2 seconds · 50 requests/month |
+| Free | 1 request every 2 seconds · 50 requests/month |
 | Pro | 1 request per second · 1,000 requests/month |
-| Corporate / Corporativo | Custom / Personalizado |
+| Corporate | Custom |
 
 The SDK automatically retries on `429` with exponential backoff (up to 3 attempts).
 
-> O SDK faz retry automático em `429` com backoff exponencial (até 3 tentativas).
-
 ---
 
-## Plans & Pricing / Planos e Preços
+## Plans & Pricing
 
 | Plan | Price | Included | Extra |
 |------|-------|----------|-------|
@@ -226,28 +227,26 @@ The SDK automatically retries on `429` with exponential backoff (up to 3 attempt
 
 This SDK is written in TypeScript and ships with full type definitions. No `@types/` package needed.
 
-> Este SDK é escrito em TypeScript e inclui definições de tipos completas. Nenhum pacote `@types/` adicional é necessário.
-
 ---
 
-## Requirements / Requisitos
+## Requirements
 
 - Node.js 18+
-- TypeScript 4.7+ (optional / opcional)
+- TypeScript 4.7+ (optional)
 
 ---
 
 ## Links
 
-- [Documentation / Documentação](https://cpfhub.io/documentacao)
-- [Dashboard / Painel](https://app.cpfhub.io)
+- [Documentation](https://cpfhub.io/documentacao)
+- [Dashboard](https://app.cpfhub.io)
 - [Status Page](https://app.cpfhub.io/status)
-- [Pricing / Preços](https://cpfhub.io#pricing)
+- [Pricing](https://cpfhub.io#pricing)
 - [LGPD Compliance](https://cpfhub.io/lgpd)
 - [OpenAPI Specification](https://github.com/cpfhub/cpfhub-openapi/blob/main/openapi.yaml)
 
 ---
 
-## License / Licença
+## License
 
 MIT © [CPFHub.io](https://cpfhub.io)
