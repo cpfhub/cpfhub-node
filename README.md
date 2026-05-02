@@ -67,6 +67,33 @@ Get your free API key at [app.cpfhub.io](https://app.cpfhub.io) — no credit ca
 
 ---
 
+## curl Example
+
+```bash
+curl -X GET "https://api.cpfhub.io/cpf/12345678909" \
+  -H "x-api-key: YOUR_API_KEY"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "data": {
+    "cpf": "12345678909",
+    "name": "Fulano de Tal",
+    "nameUpper": "FULANO DE TAL",
+    "gender": "M",
+    "birthDate": "15/06/1990",
+    "day": 15,
+    "month": 6,
+    "year": 1990
+  }
+}
+```
+
+---
+
 ## API Reference
 
 ### `new CPFHub(options)`
@@ -244,6 +271,7 @@ This SDK is written in TypeScript and ships with full type definitions. No `@typ
 - [Pricing](https://cpfhub.io#pricing)
 - [LGPD Compliance](https://cpfhub.io/lgpd)
 - [OpenAPI Specification](https://github.com/cpfhub/cpfhub-openapi/blob/main/openapi.yaml)
+- [MCP Server (AI Agents)](https://github.com/cpfhub/cpfhub-mcp)
 
 ---
 
